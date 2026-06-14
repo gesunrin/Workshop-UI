@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cart — Gesunrin Cafe</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="cart" class="">
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner container">
+      <a href="index.html" class="navbar__logo" aria-label="Gesunrin Cafe Home">
+        <span class="navbar__logo-jp">げすんりん かふぇ</span>
+        <span class="navbar__logo-en">Gesunrin Cafe</span>
+      </a>
+      <nav class="navbar__links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link ">ほーむ<span>Home</span></a>
+        <a href="catalog.html" class="nav-link ">かたろぐ<span>Catalog</span></a>
+        <a href="articles.html" class="nav-link ">すとーりー<span>Stories</span></a>
+        <a href="history.html" class="nav-link ">おーだー<span>Orders</span></a>
+      </nav>
+      <div class="navbar__actions">
+        <a class="icon-btn cart-btn" href="cart.html" aria-label="Open cart">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge" data-cart-count>0</span>
+        </a>
+        <a class="icon-btn" href="login-admin.html" aria-label="Admin login">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav class="mobile-menu__links">
+        <a href="index.html" class="mobile-nav-link"><strong>ほーむ</strong><em>Home</em></a>
+        <a href="catalog.html" class="mobile-nav-link"><strong>かたろぐ</strong><em>Catalog</em></a>
+        <a href="articles.html" class="mobile-nav-link"><strong>すとーりー</strong><em>Stories</em></a>
+        <a href="history.html" class="mobile-nav-link"><strong>おーだー</strong><em>Orders</em></a>
+        <a href="cart.html" class="mobile-nav-link"><strong>かーと</strong><em>Cart</em></a>
+        <a href="login-admin.html" class="mobile-nav-link"><strong>あどみん</strong><em>Admin Login</em></a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero compact ">
+      <div class="container">
+        <p class="section-eyebrow"><span>かーと</span><small>Cart</small></p>
+        <h1 class="kana-heading">かーと<span>Cart</span></h1>
+        <p>Review your order before checkout.</p>
+      </div>
+    </section>
+    <section class="section page-section">
+      <div class="container cart-layout">
+        <div class="panel"><div id="cartItems"></div></div>
+        <aside class="panel summary-card" id="cartSummary"></aside>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__jp">げすんりん かふぇ</p>
+        <p>Gesunrin Cafe</p>
+      </div>
+      <p>Open 08:00-21:00 · Dine-in ordering</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

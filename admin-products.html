@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Manage Products — Gesunrin Cafe</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="admin-products" class="">
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner container">
+      <a href="index.html" class="navbar__logo" aria-label="Gesunrin Cafe Home">
+        <span class="navbar__logo-jp">げすんりん かふぇ</span>
+        <span class="navbar__logo-en">Gesunrin Cafe</span>
+      </a>
+      <nav class="navbar__links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link ">ほーむ<span>Home</span></a>
+        <a href="catalog.html" class="nav-link ">かたろぐ<span>Catalog</span></a>
+        <a href="articles.html" class="nav-link ">すとーりー<span>Stories</span></a>
+        <a href="history.html" class="nav-link ">おーだー<span>Orders</span></a>
+      </nav>
+      <div class="navbar__actions">
+        <a class="icon-btn cart-btn" href="cart.html" aria-label="Open cart">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge" data-cart-count>0</span>
+        </a>
+        <a class="icon-btn" href="login-admin.html" aria-label="Admin login">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav class="mobile-menu__links">
+        <a href="index.html" class="mobile-nav-link"><strong>ほーむ</strong><em>Home</em></a>
+        <a href="catalog.html" class="mobile-nav-link"><strong>かたろぐ</strong><em>Catalog</em></a>
+        <a href="articles.html" class="mobile-nav-link"><strong>すとーりー</strong><em>Stories</em></a>
+        <a href="history.html" class="mobile-nav-link"><strong>おーだー</strong><em>Orders</em></a>
+        <a href="cart.html" class="mobile-nav-link"><strong>かーと</strong><em>Cart</em></a>
+        <a href="login-admin.html" class="mobile-nav-link"><strong>あどみん</strong><em>Admin Login</em></a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero compact admin-hero">
+      <div class="container">
+        <p class="section-eyebrow"><span>めにゅーかんり</span><small>Manage Products</small></p>
+        <h1 class="kana-heading">めにゅーかんり<span>Manage Products</span></h1>
+        <p>Create and delete product catalog items.</p>
+        <nav class="admin-nav" aria-label="Admin Navigation">
+          <a href="admin.html">だっしゅぼーど<span>Dashboard</span></a>
+          <a href="admin-articles.html">きじ<span>Articles</span></a>
+          <a href="admin-products.html">めにゅー<span>Products</span></a>
+          <a href="admin-users.html">ゆーざー<span>Users</span></a>
+          <a href="admin-transactions.html">とりひき<span>Transactions</span></a>
+          <button id="adminLogoutBtn" class="mini-btn">ろぐあうと<span>Logout</span></button>
+        </nav>
+      </div>
+    </section>
+    <section class="section page-section">
+      <div class="container admin-layout">
+        <form class="panel form-card" id="adminProductForm">
+          <h2><span>めにゅーをついか</span><small>Add Product</small></h2>
+          <label><span>なまえ</span><small>Name</small><input name="name" required /></label>
+          <label><span>かてごりー</span><small>Category</small><input name="category" required /></label>
+          <label><span>ねだん</span><small>Price</small><input name="price" type="number" required /></label>
+          <label><span>いめーじ</span><small>Image URL</small><input name="image" placeholder="assets/images/matcha.jpg" /></label>
+          <label><span>せつめい</span><small>Description</small><textarea name="desc" rows="4" required></textarea></label>
+          <button class="btn btn--primary full" type="submit">ほぞん<span>Save Product</span></button>
+        </form>
+        <div class="panel table-panel"><h2><span>めにゅーでーた</span><small>Product Data</small></h2><div class="table-wrap"><table><thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Action</th></tr></thead><tbody id="adminProductsTable"></tbody></table></div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__jp">げすんりん かふぇ</p>
+        <p>Gesunrin Cafe</p>
+      </div>
+      <p>Open 08:00-21:00 · Dine-in ordering</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
